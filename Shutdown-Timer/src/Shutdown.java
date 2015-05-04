@@ -13,7 +13,7 @@ public final class Shutdown {
 				if(osType.startsWith("Windows")){
 					set.exec("shutdown -s -t " + number);
 				}else{
-					set.exec("shutdown -h " + number);
+					set.exec("sudo shutdown -h " + number);
 				}
 			}
 			if(status == 1){
@@ -22,7 +22,7 @@ public final class Shutdown {
 				if(osType.startsWith("Windows")){
 					set.exec("shutdown -s -t " + number);
 				}else{
-					set.exec("shutdown -h " + number);
+					set.exec("sudo shutdown -h " + number);
 				}			
 			}
 			if(status == 2){
@@ -31,7 +31,7 @@ public final class Shutdown {
 				if(osType.startsWith("Windows")){
 					set.exec("shutdown -s -t " + number);
 				}else{
-					set.exec("shutdown -h " + number);
+					set.exec("sudo shutdown -h " + number);
 				}
 			}
 		} catch (IOException e) {
@@ -45,7 +45,7 @@ public final class Shutdown {
 			if(osType.startsWith("Windows")){
 				reset.exec("shutdown -a");				
 			}else{
-				reset.exec("shutdown -c");
+				reset.exec("sudo shutdown -c");
 			}
 
 		} catch (IOException e1) {

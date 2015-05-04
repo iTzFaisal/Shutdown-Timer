@@ -70,7 +70,7 @@ public class ShutdownGUI {
 		frmShutdownTimer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmShutdownTimer.getContentPane().setLayout(null);
 		try{
-			icon = ImageIO.read(new File("shutdown.png"));
+			icon = ImageIO.read(new File("img/shutdown.png"));
 		}catch(IOException e){
 			
 		}
