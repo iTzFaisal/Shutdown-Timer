@@ -10,13 +10,11 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
-import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
@@ -28,8 +26,6 @@ public class ShutdownGUI {
 	private JButton btnSetTimer;
 	private JButton btnResetTimer;
 	private JLabel lblByFaisalAlkheraiji;
-	private JRadioButtonMenuItem radioButtonsGroup;
-	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JRadioButton rdbtnMinutes;
 	private JRadioButton rdbtnHours;
 	private JRadioButton rdbtnSeconds;
@@ -77,11 +73,11 @@ public class ShutdownGUI {
 		frmShutdownTimer.setIconImage(icon);
 		
 		JLabel lblEnterTime = new JLabel("Enter Time:");
-		lblEnterTime.setBounds(12, 13, 79, 16);
+		lblEnterTime.setBounds(33, 13, 79, 16);
 		frmShutdownTimer.getContentPane().add(lblEnterTime);
 		
 		tfTime = new JTextField();
-		tfTime.setBounds(89, 10, 180, 22);
+		tfTime.setBounds(113, 10, 180, 22);
 		frmShutdownTimer.getContentPane().add(tfTime);
 		tfTime.setColumns(10);
 		
@@ -106,7 +102,7 @@ public class ShutdownGUI {
 				}
 			}
 		});
-		btnSetTimer.setBounds(12, 69, 108, 25);
+		btnSetTimer.setBounds(33, 69, 108, 25);
 		frmShutdownTimer.getContentPane().add(btnSetTimer);
 		
 		btnResetTimer = new JButton("Reset Timer");
@@ -115,7 +111,7 @@ public class ShutdownGUI {
 				Shutdown.resetTimer();
 			}
 		});
-		btnResetTimer.setBounds(161, 69, 108, 25);
+		btnResetTimer.setBounds(185, 69, 108, 25);
 		frmShutdownTimer.getContentPane().add(btnResetTimer);
 		
 		lblByFaisalAlkheraiji = new JLabel("By: Faisal Alkheraiji");
@@ -132,7 +128,7 @@ public class ShutdownGUI {
 				rdbtnHours.setSelected(false);
 			}
 		});
-		rdbtnSeconds.setBounds(12, 35, 100, 25);
+		rdbtnSeconds.setBounds(33, 35, 79, 25);
 		frmShutdownTimer.getContentPane().add(rdbtnSeconds);
 		
 		rdbtnMinutes = new JRadioButton("Minutes");
@@ -143,7 +139,7 @@ public class ShutdownGUI {
 				rdbtnSeconds.setSelected(false);
 			}
 		});
-		rdbtnMinutes.setBounds(116, 35, 100, 25);
+		rdbtnMinutes.setBounds(131, 35, 85, 25);
 		frmShutdownTimer.getContentPane().add(rdbtnMinutes);
 
 		
@@ -155,7 +151,7 @@ public class ShutdownGUI {
 				rdbtnSeconds.setSelected(false);
 			}
 		});
-		rdbtnHours.setBounds(220, 35, 100, 25);
+		rdbtnHours.setBounds(235, 35, 85, 25);
 		frmShutdownTimer.getContentPane().add(rdbtnHours);		
 	}
 }
